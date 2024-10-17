@@ -5,4 +5,7 @@
     <string name="gallery">Galeri</string>
     <string name="analyze">Analyze</string>
     <string name="result">Hasil Analisis</string>
+    <string name="image_classifier_failed">Image Classifier Failed</string>
+    <string name="hasil_klasifikasi">Hasil Klasifikasi</string>
+    <string name="desc">Hey welcome to Ascipleus Cancer detection</string>
 </resources>
