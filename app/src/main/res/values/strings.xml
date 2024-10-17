@@ -8,4 +8,6 @@
     <string name="image_classifier_failed">Image Classifier Failed</string>
     <string name="hasil_klasifikasi">Hasil Klasifikasi</string>
     <string name="desc">Hey welcome to Ascipleus Cancer detection</string>
+    <string name="title">Title</string>
+    <string name="published_date">Published Date</string>
 </resources>
