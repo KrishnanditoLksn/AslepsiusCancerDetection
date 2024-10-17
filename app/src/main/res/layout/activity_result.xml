@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".view.ResultActivity">
 
     <LinearLayout
@@ -16,13 +17,28 @@
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_place_holder"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_place_holder" />
 
         <TextView
+            android:id="@+id/result_classification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"
+            android:text="@string/hasil_klasifikasi">
+        </TextView>
+        <TextView
             android:id="@+id/result_text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="@string/result" />
+
+
     </LinearLayout>
 </ScrollView>
