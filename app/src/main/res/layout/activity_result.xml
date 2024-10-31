@@ -5,40 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".view.ResultActivity">
+    tools:context=".ui.view.ResultActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/result_image"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="400dp"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_place_holder" />
 
         <TextView
             android:id="@+id/result_classification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:layout_margin="16dp"
-            android:text="@string/hasil_klasifikasi">
-        </TextView>
+            android:layout_marginTop="8dp"
+            android:text="@string/hasil_klasifikasi"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_image" />
+
         <TextView
             android:id="@+id/result_text"
             android:layout_width="wrap_content"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/result_classification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/result" />
 
-
-    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_health"
+            android:layout_width="411dp"
+            android:layout_height="234dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
